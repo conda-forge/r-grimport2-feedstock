@@ -1,4 +1,4 @@
-{% set version = "0.2-0" %}
+{% set version = "0.3-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/grImport2_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/grImport2/grImport2_{{ version }}.tar.gz
-  sha256: a102a2d877e42cd4e4e346e5510a77b2f3e57b43ae3c6d5c272fdceb506b00a7
+  sha256: 1f7aa3e19409b7097416db8d2b2d4b34af82c58d1d4debca7e9a87ca450f6712
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -43,16 +43,12 @@ test:
 
 about:
   home: https://r-forge.r-project.org/projects/grimport/,https://stattech.wordpress.fos.auckland.ac.nz/2013/09/,https://stattech.wordpress.fos.auckland.ac.nz/2016/08/30/2016-11-the-butterfly-affectation/
-  license: GPL (>= 2)
-  summary: Functions for importing external vector images and drawing them as part of 'R' plots.  This
-    package is different from the 'grImport' package because, where that package imports
-    'PostScript' format images, this package imports 'SVG' format images.  Furthermore,
-    this package imports a specific subset of 'SVG', so external images must be preprocessed
-    using a package like 'rsvg' to produce 'SVG' that this package can import.  'SVG'
-    features that are not supported by 'R' graphics, e.g., gradient fills, can be imported
-    and then exported via the 'gridSVG' package.
+  license: GPL-2.0-or-later
+  summary: Functions for importing external vector images and drawing them as part of 'R' plots.  This package is different from the 'grImport' package because, where that package imports 'PostScript' format images, this package imports 'SVG' format images.  Furthermore, this package imports a specific subset of 'SVG', so
+    external images must be preprocessed using a package like 'rsvg' to produce 'SVG' that this package can import.  'SVG' features that are not supported by 'R' graphics, e.g., gradient fills, can be imported and then exported via the 'gridSVG' package.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
