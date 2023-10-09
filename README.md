@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-grimport2-fee
 
 Home: https://r-forge.r-project.org/projects/grimport/,https://stattech.wordpress.fos.auckland.ac.nz/2013/09/,https://stattech.wordpress.fos.auckland.ac.nz/2016/08/30/2016-11-the-butterfly-affectation/
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Summary: Functions for importing external vector images and drawing them as part of 'R' plots.  This package is different from the 'grImport' package because, where that package imports 'PostScript' format images, this package imports 'SVG' format images.  Furthermore, this package imports a specific subset of 'SVG', so external images must be preprocessed using a package like 'rsvg' to produce 'SVG' that this package can import.  'SVG' features that are not supported by 'R' graphics, e.g., gradient fills, can be imported and then exported via the 'gridSVG' package.
 
